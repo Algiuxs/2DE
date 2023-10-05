@@ -47,17 +47,17 @@ public class Texture {
 		}
 	}
 
-	protected void finalize() throws Throwable{
-		try{
-			GL13.glDeleteTextures(id);
-		}finally {
-			super.finalize();
-		}
-		
-	}
-	//public void del(){
-	//	GL13.glDeleteTextures(id);
+//	protected void finalize() throws Throwable{
+	//	try{
+	//		GL13.glDeleteTextures(id);
+	//	}finally {
+	//		super.finalize();
+	//	}
+	//	
 	//}
+	public void del(){
+		GL13.glDeleteTextures(id);
+	}
 
 	public void bind(int Sampler) {
 		if(Sampler>=0 && Sampler <=31) {

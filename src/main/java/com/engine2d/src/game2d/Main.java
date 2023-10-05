@@ -73,7 +73,6 @@ public class Main {
 		double unprocessed = 0;
 				
 		while(window.shouldClose()) {
-			System.out.println(window.shouldClose());
 			
 			boolean can_render = false;
 			
