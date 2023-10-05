@@ -110,17 +110,7 @@ public class Main {
 			
 			if(can_render) {
 				GL11.glClear(GL11.GL_COLOR_BUFFER_BIT);
-			
-			
-//				shader.bind();
-//				shader.setUniform("sampler", 0);
-//				shader.setUniform("projection", cam.getProjection().mul(target));
-			
-				//model.render();
-				//tex.bind(0);
-				
 				world.render(tiles, shader, cam, window);
-				
 				window.updateWindow();
 				frames ++;
 			}
