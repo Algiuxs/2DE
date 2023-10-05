@@ -72,7 +72,7 @@ public class Main {
 		double time = Timer.getTime();
 		double unprocessed = 0;
 				
-		while(!window.shouldClose()) {
+		while(window.shouldClose()) {
 			System.out.println(window.shouldClose());
 			
 			boolean can_render = false;
