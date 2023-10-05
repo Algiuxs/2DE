@@ -47,6 +47,20 @@ public class Texture {
 			e.printStackTrace();
 		}
 	}
+
+	//	protected void finalize() throws Throwable{
+	//	try{
+	//		GL13.glDeleteTextures(id);
+	//	}finally {
+	//		super.finalize();
+	//	}
+	//	
+	//}
+	
+	public void del(){
+		GL13.glDeleteTextures(id);
+	}
+
 	public void bind(int Sampler) {
 		if(Sampler>=0 && Sampler <=31) {
 			GL13.glActiveTexture(GL13.GL_TEXTURE0 + Sampler);
