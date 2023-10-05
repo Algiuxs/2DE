@@ -116,7 +116,7 @@ public class Main {
 			}
 		}
 		Entity.deleteAsset();
-		//tex.del();
+		
 		shader.desctruct();
 		GLFW.glfwTerminate();
 	}
