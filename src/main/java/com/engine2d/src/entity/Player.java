@@ -20,7 +20,7 @@ public class Player extends Entity{
 		super(anim_size, transform);
 		
 		setAnimation(anim_idle, new Animation(11, 5, "Player/Idle/Idle"));
-		setAnimation(anim_idle, new Animation(4, 5, "Player/Walk/Player"));
+		setAnimation(anim_walk, new Animation(4, 5, "Player/Walk/Player"));
 	}
 
 	@Override
