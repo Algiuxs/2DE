@@ -22,8 +22,8 @@ public class Main {
 		
 		Window window = new Window();
 		
-		//win.setSize(1200, 720);
-		window.setFulscreen(false);
+		//window.setSize(1200, 720);
+		window.setFulscreen(true);
 		window.createWindow("2D");
 		
 		GL.createCapabilities();
@@ -32,34 +32,10 @@ public class Main {
 		
 		Camera cam = new Camera(window.getWidth(), window.getHeight());
 		GL11.glEnable(GL11.GL_TEXTURE_2D);
-
-		//Texture tex = new Texture(null);
 		
 		TileRenderer tiles = new TileRenderer();
 		Entity.initAsset();
 		
-//		float [] vertices = new float[] {
-//				-0.5f, 0.5f, 0,
-//				0.5f, 0.5f, 0,
-//				0.5f, -0.5f, 0,
-//				-0.5f, -0.5f, 0,
-//		};
-//		
-//		float [] texture = new float[] {
-//			0,0,
-//			1,0,
-//			1,1,
-//			0,1,
-//
-//			
-//		};
-//		
-//		int [] indices = new int[] {
-//			0,1,2,
-//			2,3,0
-//		};
-//		
-//		Model model = new Model(vertices, texture, indices);
 		Shader shader = new Shader("shader");
 		World world = new World("Test");
 

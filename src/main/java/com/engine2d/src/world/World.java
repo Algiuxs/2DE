@@ -21,7 +21,7 @@ import com.engine2d.src.render.Camera;
 import com.engine2d.src.render.Shader;
 
 public class World {
-	private final int view = 25;
+	private final int view = 40;
 	private byte[] tiles;
 	private AABB[] bounding_boxes;
 	private List<Entity> entities;
@@ -75,8 +75,8 @@ public class World {
 	}
 
 	public World() {
-		width = 64;
-		height = 64;
+		width = 124;
+		height = 124;
 		scale = 16;
 
 		tiles = new byte[width * height];

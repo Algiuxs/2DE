@@ -5,6 +5,7 @@ import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.glfw.GLFWVidMode;
 
 public class Window {
+	private GLFWVidMode vid;
 	private long windowID;
 	
 	private int width, height;
@@ -30,7 +31,13 @@ public class Window {
 	}
 														  
 	public void createWindow(String Title) {
-		
+		if(fulscreen) {
+			if(vid == null) {
+				vid = GLFW.glfwGetVideoMode(GLFW.glfwGetPrimaryMonitor());
+			}
+			this.width = vid.width();
+			this.height = vid.height();
+		}
 		windowID = GLFW.glfwCreateWindow(width, height, Title, fulscreen ? GLFW.glfwGetPrimaryMonitor() : 0, 0);
 		
 		if(windowID == 0) {
@@ -47,6 +54,13 @@ public class Window {
 				GLFW.glfwShowWindow(windowID);
 			}
 			
+		}else {
+			if(vid == null) {
+				vid = GLFW.glfwGetVideoMode(GLFW.glfwGetPrimaryMonitor());
+			}
+			this.width = vid.width();
+			this.height = vid.height();
+			GLFW.glfwSetWindowSize(windowID, this.width, this.height);
 		}
 		GLFW.glfwMakeContextCurrent(windowID);
 		

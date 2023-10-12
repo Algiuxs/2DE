@@ -50,7 +50,7 @@ public class Player extends Entity{
 		}
 		
 		camera.getPosition().lerp(transform.pos.mul(-world.getScale(), new Vector3f()), 0.08f);
-		//cam.setPos(transform.pos.mul(-world.getScale(), new Vector3f()));
+		//amera.setPos(transform.pos.mul(-world.getScale(), new Vector3f()));
 	}
 	
 	
